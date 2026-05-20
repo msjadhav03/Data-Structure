@@ -10,4 +10,6 @@
 
 # Day 2
 
--
+- Linear Search O(n)
+- Binary Search O(n logn)
+- Duplicate Element O(n)
