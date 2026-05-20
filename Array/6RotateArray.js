@@ -1,3 +1,0 @@
-/**
- * Rotate Array
- */
