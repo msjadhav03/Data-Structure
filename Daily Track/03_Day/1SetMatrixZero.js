@@ -24,30 +24,36 @@ class SetZeros {
     const cols = matrix[0].length;
 
     // Step : Now we will check if we need to set first row zeros
-    for (let i = 0; i < cols.length; i++) {
-      if (matrix[0][i] === 0) {
+    for (let col = 0; col < cols.length; i++) {
+      if (matrix[0][col] === 0) {
         isFirstRowZero = true;
       }
     }
 
     // Step 2: Now we will check if we need to set first columns need to set to Zeros
-    for (let i = 0; i < rows.length; i++) {
-      if (matrix[i][0] === 0) {
+    for (let row = 0; row < rows.length; i++) {
+      if (matrix[row][0] === 0) {
         isFirstColumnZero = true;
       }
     }
+    console.log(
+      `isFirstRowZero: ${isFirstRowZero}, isFirstColumnZero: ${isFirstColumnZero}`,
+    );
+    console.log(`Length of rows: ${rows}, length of cols: ${cols}`);
     // Step 3: Now we will use first row and first column as markers to inner matrix eleements
-    for (row = 1; row < row.length; row++) {
-      for (col = 1; col < col.length; col++) {
+    for (let row = 1; row < row.length; row++) {
+      for (let col = 1; col < col.length; col++) {
+        console.log(` ---- Checking element at row: ${row}, col: ${col}`);
         if (matrix[row][col] === 0) {
           matrix[row][0] = 0;
           matrix[0][col] = 0;
         }
       }
     }
+    console.log(`Matrix after setting inner zeros: ${matrix}`);
 
-    for (row = 1; row < rows.length; row++) {
-      for (col = 1; col < col.length; col++) {
+    for (let row = 1; row < rows.length; row++) {
+      for (let col = 1; col < col.length; col++) {
         if (matrix[i][0] === 0 || matrix[0][j] === 0) {
           matrix[row][col] = 0;
         }
