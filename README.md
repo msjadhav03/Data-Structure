@@ -13,3 +13,7 @@
 - Linear Search O(n)
 - Binary Search O(n logn)
 - Duplicate Element O(n)
+
+# Day 06
+
+- Max Sum array sum
